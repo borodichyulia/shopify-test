@@ -1,5 +1,5 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
-{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'section-footer.css' | asset_url | stylesheet_tag }}
 <link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-list-payment.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -12,7 +12,7 @@
 <noscript>{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-list-social.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript> {% endcomment %}
 
 {%- style -%}
   .footer {
@@ -22,111 +22,111 @@
     padding:  83px 0px 0px 0px;
     font-size: 12px !important;
     margin: 0px auto;
-
   }
-  .container-footer{
-  display: flex;
-  justify-content: space-between;
-  height: 61.8%;
-  margin: 0px  10% 0px  10%;
-}
 
-.title-column{
-  font-weight: 700;
-  line-height: 1.5;
-  color: white;
-  text-transform: uppercase;
-}
+  .footer-container{
+    display: flex;
+    justify-content: space-between;
+    height: 61.8%;
+    margin: 0px  10% 0px  10%;
+  }
 
-.subscription-column{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 20%;
-  color: #B0B0B0;
-}
+  .title-column{
+    font-weight: 700;
+    line-height: 1.5;
+    color: white;
+    text-transform: uppercase;
+  }
 
-.user-email{
-  width: 61%;
-  border: 1px solid #B0B0B0;
-  background: #484848;
-  color: #B0B0B0;
-  padding-left: 3%;
-}
+  .subscription-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    color: #B0B0B0;
+  }
 
-.button-submit-email{
-  background: #B0B0B0;
-  font-weight: 700;
-  color: white;
-  border:none;
-}
+  .user-email{
+    width: 61%;
+    border: 1px solid #B0B0B0;
+    background: #484848;
+    color: #B0B0B0;
+    padding-left: 3%;
+  }
 
-.subscription{
-  display: flex;
-  height: 41px;
-}
+  .button-submit-email{
+    background: #B0B0B0;
+    font-weight: 700;
+    color: white;
+    border:none;
+  }
 
-.nav-column{
-  display: flex;
-  flex-direction: column;
-  width: 17%;
-}
+  .subscription{
+    display: flex;
+    height: 41px;
+  }
 
-.nav-items{
-  list-style-type: none;
-  color: #B0B0B0;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 0px;
-  margin: 0px;
-}
+  .nav-column{
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+  }
+
+  .nav-items{
+    list-style-type: none;
+    color: #B0B0B0;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0px;
+    margin: 0px;
+  }
 
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
-<div class="container-footer">
-  <div class="subscription-column">
-    <div class="title-column">Подписаться</div>    
-    <div class="describe-column">Подпишитесь на наши новости и узнавайте первыми о самом интересном, что происходит в увлекательном мире ретро электрики.</div>    
-    <form class="subscription">
-      <input type="email" name="UserEmail" value="Ваш E-mail адрес" class="user-email"><br>
-      <input type="submit" value="Подписаться" class="button-submit-email">
-      </form>
-  </div>
-  <div class="nav-column">
-    <div class="title-column">Полезная информация</div>
-    <ul class="nav-items">
-      <li>Наши контакты</li>
-      <li>Сотрудничество</li>
-      <li>Монтаж</li>
-      <li>Карта сайта</li>
-  </ul>
-  </div>
-  <div class="nav-column">
-    <div class="title-column">как приобрести</div>
-    <ul class="nav-items">
-      <li>Наши контакты</li>
-      <li>Сотрудничество</li>
-      <li>Монтаж</li>
-      <li>Карта сайта</li>
+  <div class="footer-container">
+    <div class="subscription-column">
+      <div class="title-column">Подписаться</div>    
+      <div class="describe-column">Подпишитесь на наши новости и узнавайте первыми о самом интересном, что происходит в увлекательном мире ретро электрики.</div>    
+      <form class="subscription">
+        <input type="email" name="UserEmail" value="Ваш E-mail адрес" class="user-email"><br>
+        <input type="submit" value="Подписаться" class="button-submit-email">
+        </form>
+    </div>
+    <div class="nav-column">
+      <div class="title-column">Полезная информация</div>
+      <ul class="nav-items">
+        <li>Наши контакты</li>
+        <li>Сотрудничество</li>
+        <li>Монтаж</li>
+        <li>Карта сайта</li>
     </ul>
+    </div>
+    <div class="nav-column">
+      <div class="title-column">как приобрести</div>
+      <ul class="nav-items">
+        <li>Наши контакты</li>
+        <li>Сотрудничество</li>
+        <li>Монтаж</li>
+        <li>Карта сайта</li>
+      </ul>
+    </div>
+    <div class="nav-column">
+      <div class="title-column">Личное пространство</div>
+      <ul class="nav-items">
+        <li>Наши контакты</li>
+        <li>Сотрудничество</li>
+        <li>Монтаж</li>
+        <li>Карта сайта</li>
+      </ul>
+    </div>
   </div>
-  <div class="nav-column">
-    <div class="title-column">Личное пространство</div>
-    <ul class="nav-items">
-      <li>Наши контакты</li>
-      <li>Сотрудничество</li>
-      <li>Монтаж</li>
-      <li>Карта сайта</li>
-    </ul>
-  </div>
-</div>
 </footer>
 
 
-{% javascript %}
+{% comment %} {% javascript %}
   class LocalizationForm extends HTMLElement {
     constructor() {
       super();
@@ -446,4 +446,4 @@
     ]
   }
 }
-{% endschema %}
+{% endschema %} {% endcomment %}

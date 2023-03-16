@@ -1,4 +1,4 @@
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-rte.css' | asset_url | stylesheet_tag }}
 
@@ -44,9 +44,68 @@
   if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop
     assign show_desktop_slider = true
   endif
--%}
+-%} {% endcomment %}
 
-<div class="color-{{ section.settings.color_scheme }} isolate gradient">
+{%- style -%}
+
+  .about-container{
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+  }
+  .left-part-about{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 35%;
+  }
+
+  .title{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 30px;
+    margin-bottom: 10%;
+  }
+
+  .description{
+    font-weight: 300;
+    color: #646464;
+    font-size: 12px;
+    line-height: 30px; 
+    margin-bottom: 7.5%;
+  }
+
+  .more-description{
+    height: 41.09482955932617px;
+    width: 123px;
+    left: 370px;
+    top: 1960px;
+    border-radius: 100px;
+    background: #F9A82F;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+{%- endstyle -%} 
+
+<div class="about-container">
+  <div class="left-part-about">
+    <div class="title">Коротко о нас</div>
+    <div class="description">Мы, Фабрика Декора "КерамикЪ", уже много лет специализируемся на ретро электрике.
+    За годы существования из увлекшихся любителей с горящими глазами наша команда превратилась в настоящих с большой буквы Профессионалов своего дела. Но искра
+    в наших глазах совершенно не затухла! Сегодня, мы планомерно работаем над тем,
+    чтоб вырастить в таких же Профессионалов новых членов нашей команды.</div>
+    <button class="more-description">Подробнее</button>
+  </div>
+  <div class="right-part-about">
+    <img src="https://cdn.shopify.com/s/files/1/0732/3569/3849/files/image.png?v=1678951926" width="auto" height="auto" loading="lazy" alt="ceramic">
+  </div>
+</div>
+
+{% comment %} <div class="color-{{ section.settings.color_scheme }} isolate gradient">
   <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
       {%- if section.settings.title != blank -%}
@@ -402,4 +461,4 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %} {% endcomment %}
