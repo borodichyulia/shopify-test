@@ -55,12 +55,6 @@
     <button class="about__more-description">Подробнее</button>
   </div>
   <div class="about__img">
-    <img
-      src="https://cdn.shopify.com/s/files/1/0732/3569/3849/files/image.png?v=1678951926"
-      width="auto"
-      height="auto"
-      loading="lazy"
-      alt="ceramic"
-    >
+    {{ 'lamp.png' | asset_url | img_tag: 'Lamp' }}
   </div>
 </section>
