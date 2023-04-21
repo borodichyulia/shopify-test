@@ -1,10 +1,5 @@
 {
   "sections": {
-    "header": {
-      "type": "header",
-      "settings": {
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "settings": {
@@ -17,7 +12,6 @@
     }
   },
   "order": [
-    "header",
     "image_banner",
     "featured_collection"
   ]
