@@ -1,4 +1,3 @@
-
 {%- style -%}
   .footer {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
@@ -14,16 +13,24 @@
     justify-content: space-between;
     height: 61.8%;
     margin: 0px  10% 0px  10%;
+    list-style-type: none;
+    padding: 0;
   }
 
-  .title-column{
+  .footer__title-column{
     font-weight: 700;
     line-height: 1.5;
     color: white;
     text-transform: uppercase;
+    margin: 0;
+    font-size: 16px;
   }
 
-  .subscription-column{
+  .footer__describe-column{
+    margin: 0;
+  }
+
+  .nav-column_subscription{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -46,7 +53,7 @@
     border:none;
   }
 
-  .subscription{
+  .footer__subscription{
     display: flex;
     height: 41px;
   }
@@ -54,7 +61,7 @@
   .nav-column{
     display: flex;
     flex-direction: column;
-    width: 17%;
+    width: 20%;
   }
 
   .nav-items{
@@ -72,46 +79,47 @@
     text-decoration: none;
     color: #B0B0B0;
   }
-
 {%- endstyle -%}
 
-<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
-  <div class="footer-container">
-    <div class="subscription-column">
-      <div class="title-column">Подписаться</div>    
-      <div class="describe-column">Подпишитесь на наши новости и узнавайте первыми о самом интересном, что происходит в увлекательном мире ретро электрики.</div>    
-      <form class="subscription">
+<footer class="footer">
+  <ul class="footer-container">
+    <li class="nav-column_subscription">
+      <h3 class="footer__title-column">Подписаться</h3>
+      <p class="footer__describe-column">
+        Подпишитесь на наши новости и узнавайте первыми о самом интересном, что происходит в увлекательном мире ретро
+        электрики.
+      </p>
+      <form class="footer__subscription">
         <input type="email" name="UserEmail" value="Ваш E-mail адрес" class="user-email"><br>
         <input type="submit" value="Подписаться" class="button-submit-email">
-        </form>
-    </div>
-    <div class="nav-column">
-      <div class="title-column">Полезная информация</div>
+      </form>
+    </li>
+    <li class="nav-column">
+      <h3 class="footer__title-column">Полезная информация</h3>
       <ul class="nav-items">
         <li><a href="#">Наши контакты</a></li>
         <li><a href="#">Сотрудничество</a></li>
         <li><a href="#">Монтаж</a></li>
         <li><a href="#">Карта сайта</a></li>
-    </ul>
-    </div>
-    <div class="nav-column">
-      <div class="title-column">Как приобрести</div>
+      </ul>
+    </li>
+    <li class="nav-column">
+      <h3 class="footer__title-column">Как приобрести</h3>
       <ul class="nav-items">
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Оплата</a></li>
         <li><a href="#">Публичная оферта</a></li>
         <li><a href="#">Политика конфиденциальности</a></li>
       </ul>
-    </div>
-    <div class="nav-column">
-      <div class="title-column">Личное пространство</div>
+    </li>
+    <li class="nav-column">
+      <h3 class="footer__title-column">Личное пространство</h3>
       <ul class="nav-items">
         <li><a href="#">Войти в кабинет </a></li>
         <li><a href="#">История заказов</a></li>
         <li><a href="#">Избранные товары</a></li>
         <li><a href="#">Подписка на новости</a></li>
       </ul>
-    </div>
-  </div>
+    </li>
+  </ul>
 </footer>
-

@@ -1,4 +1,3 @@
-
 {%- style -%}
   .header {
     height: 151px;
@@ -8,99 +7,126 @@
     flex-direction: column;
   }
 
-  .first-nav{
+  .nav_top {
     display: flex;
     justify-content: space-between;
     height: 91px;
-    background: #F8F8F8;
+    background: #f8f8f8;
     width: 100%;
     padding: 0px 10%;
     align-items: center;
   }
 
-  .second-nav{
+  .nav_top > ul {
+    list-style-type: none;
+  }
+
+  .nav_down {
     height: 60px;
-    background: #FFFFFF;
+    background: #ffffff;
+    padding: 0px 10%;
     display: flex;
     width: 100%;
-    padding: 0px 10%;
-    justify-content: space-between;
     align-items: center;
   }
 
-  .left-part{
+  .nav_down > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+  }
+
+  .nav__left-part {
     display: flex;
     width: 67%;
     justify-content: space-between;
     align-items: center;
   }
 
-  .right-part{
+  .nav__left-part,
+  .nav__right-part {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav__left-part li:last-child {
+    width: 35%;
+  }
+
+  .nav__right-part {
     display: flex;
     justify-content: space-between;
     width: 23%;
+    align-items: center;
+    height: 60.4px;
   }
 
-  .number{
-    font-weight: 700;
+  .nav__telephone-number b {
     font-size: 16px;
     line-height: 19px;
     color: #000000;
   }
 
-  .backcall-submit{
-    color: #F9A82F;
+  .nav__backcall-submit {
+    color: #f9a82f;
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
     text-decoration-line: underline;
-  }  
+  }
 
-  .telephone-number{
+  .nav__telephone-number {
     display: flex;
     flex-direction: column;
   }
 
-  .search-nav input {
+  .nav__search input {
     box-sizing: border-box;
     width: 100%;
     height: 38px;
-    background: #F8F8F8;  
-    border: 1px solid #DCDCDC;
+    background: #f8f8f8;
+    border: 1px solid #dcdcdc;
     border-radius: 50px;
     padding-left: 6%;
     font-weight: 300;
     line-height: 16.41px;
   }
 
-  .search-nav button {
+  .nav__search button {
     position: absolute;
     top: 0.8em;
     right: 1em;
     height: 1.4em;
     width: 1.4em;
     border: none;
-    background-color: #F8F8F8;
-    background-image: url("https://cdn.shopify.com/s/files/1/0732/3569/3849/files/Vector.svg?v=1678949891");
+    background-color: #f8f8f8;
+    background-image: url('https://cdn.shopify.com/s/files/1/0732/3569/3849/files/Vector.svg?v=1678949891');
     background-repeat: no-repeat;
   }
-  .search-nav {
-    width: 34.5%;
+
+  .nav__search {
+    width: 100%;
     position: relative;
   }
 
-  .second-nav a {
+  .nav_down a {
     text-decoration: none;
     color: black;
     line-height: 19px;
     font-weight: 700;
   }
 
-  .second-nav a:active, .second-nav a:hover {
-    color: #F9A82F;
+  .nav_down a:active,
+  .nav_down a:hover {
+    color: #f9a82f;
   }
 
-  .dropbtn {
+  .nav__dropbtn {
     color: black;
     border: none;
     line-height: 19px;
@@ -109,77 +135,152 @@
     font-size: 12px;
   }
 
-  .dropdown {
+  .nav__dropdown {
     position: relative;
     display: inline-block;
   }
 
-  .dropdown-content {
+  .nav__dropdown-content {
     display: none;
     position: absolute;
     width: 346%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    background: #FFFFFF;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
   }
 
-  .dropdown-content a {
-    color: #A9A9A9;
+  .nav__dropdown-content a {
+    color: #a9a9a9;
     padding: 6px 16px;
     text-decoration: none;
     display: block;
   }
 
-  .dropdown:hover .dropdown-content {display: block;}
+  .nav__dropdown:hover .nav__dropdown-content {
+    display: block;
+  }
 
-  .dropdown:hover .dropbtn {color: #F9A82F;}
+  .nav__dropdown:hover .nav__dropbtn {
+    color: #f9a82f;
+  }
 
+  .header__icon-heart,
+  .header__icon-cart,
+  .header__icon-profile {
+    display: flex;
+    position: relative;
+  }
+
+  .header__icon-cart {
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
+  }
+
+  .header__number-likes,
+  .header__number-products {
+    position: absolute;
+    background: #f9a82f;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 12px;
+    left: 17px;
+    font-weight: 700;
+    font-size: 11px;
+    color: #ffffff;
+  }
+
+  .header__number-products {
+    bottom: 12px;
+    left: 10px;
+  }
+
+  .header__total-price {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: #6b422b;
+  }
 {%- endstyle -%}
 
 <header class="header">
-  <div class="first-nav">
-    <div class="left-part">
-      <a href="#"><img src="https://cdn.shopify.com/s/files/1/0732/3569/3849/files/logo1.svg?v=1678947378" width="168" height="54" loading="lazy" alt="logo"></a>
-      <div class="telephone-number">
-        <span class="number">+7 926 780 3663</span>
-        <a href="#" class="backcall-submit">Обратный звонок</a>
-      </div>
-      <form class="search-nav">
-        <input type="text" placeholder="Поиск">
-        <button type="submit"></button>
-      </form>
-    </div>
-    <div class="right-part">
-      <a href="#"><img src="https://cdn.shopify.com/s/files/1/0732/3569/3849/files/bookmarks.svg?v=1678947549" width="27" height="24" loading="lazy" alt="bookmarks"></a>
-      <a href="#"><img src="https://cdn.shopify.com/s/files/1/0732/3569/3849/files/cart.svg?v=1678913751"  width="100" height="28" loading="lazy" alt="cart"></a>
-      <a href="#"><img src="https://cdn.shopify.com/s/files/1/0732/3569/3849/files/profile.svg?v=1678947378" width="22" height="22" loading="lazy" alt="profile"></a>
-  
-    </div>
-  </div>
-  <div class="second-nav">
-    <div class="dropdown">
-      <button class="dropbtn">Каталог</button>
-      <div class="dropdown-content">
-        <a href="#">ВСЕ ТОВАРЫ</a>
-        <a href="#">РОЗЕТКИ</a>
-        <a href="#">ВЫКЛЮЧАТЕЛИ</a>
-        <a href="#">РАСПАЕЧНЫЕ КОРОБКИ</a>
-        <a href="#">КАБЕЛЬНЫЕ ИЗОЛЯТОРЫ</a>
-        <a href="#">ВТУЛКИ</a>
-        <a href="#">РАМКИ</a>
-        <a href="#">ПРОВОДА</a>
-        <a href="#">СВЕТИЛЬНИКИ</a>
-        <a href="#">ЛАМПЫ</a>
-        <a href="#">АКСЕССУАРЫ</a>
-      </div>
-    </div>
-    <a href="#">Главная</a>
-    <a href="#">О нас</a>
-    <a href="#">Акции</a>
-    <a href="#">Новости</a>
-    <a href="#">Контакты</a>
-  </div>
-  
+  <nav class="nav_top">
+    <ul class="nav__left-part">
+      <li>
+        <a href="#">
+          {%- liquid
+            render 'icon-logo'
+          -%}
+        </a>
+      </li>
+      <li class="nav__telephone-number">
+        <b>+7 926 780 3663</b>
+        <a href="tel:+79267803663" class="nav__backcall-submit"> Обратный звонок </a>
+      </li>
+      <li>
+        <form class="nav__search">
+          <input type="text" placeholder="Поиск">
+          <button type="submit"></button>
+        </form>
+      </li>
+    </ul>
+    <ul class="nav__right-part">
+      <li>
+        <a href="#" class="header__icon-heart">
+          {%- liquid
+            render 'icon-heart'
+          -%}
+          <span class="header__number-likes">7</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="header__icon-cart">
+          {%- liquid
+            render 'icon-cart2'
+          -%}
+          <span class="header__number-products">10</span>
+          <b class="header__total-price">15345 руб.</b>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="header__icon-profile">
+          {%- liquid
+            render 'icon-profile'
+          -%}
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="nav_down">
+    <ul>
+      <li class="nav__dropdown">
+        <button class="nav__dropbtn">Каталог</button>
+        <ul class="nav__dropdown-content">
+          <li><a href="#">ВСЕ ТОВАРЫ</a></li>
+          <li><a href="#">РОЗЕТКИ</a></li>
+          <li><a href="#">ВЫКЛЮЧАТЕЛИ</a></li>
+          <li><a href="#">РАСПАЕЧНЫЕ КОРОБКИ</a></li>
+          <li><a href="#">КАБЕЛЬНЫЕ ИЗОЛЯТОРЫ</a></li>
+          <li><a href="#">ВТУЛКИ</a></li>
+          <li><a href="#">РАМКИ</a></li>
+          <li><a href="#">ПРОВОДА</a></li>
+          <li><a href="#">СВЕТИЛЬНИКИ</a></li>
+          <li><a href="#">ЛАМПЫ</a></li>
+          <li><a href="#">АКСЕССУАРЫ</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Акции</a></li>
+      <li><a href="#">Новости</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </nav>
 </header>
-
-

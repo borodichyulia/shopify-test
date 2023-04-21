@@ -1,61 +1,66 @@
-
 {%- style -%}
-
-  .about-container{
+  .about {
     height: 450px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 10%;
   }
-  .left-part-about{
+  .about__content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
     width: 35%;
+    height: 76.5%;
   }
 
-  .title{
+  .about__title {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 36px;
     line-height: 30px;
-    margin-bottom: 10%;
+    margin: 0;
   }
 
-  .description{
+  .about__description {
     font-weight: 300;
     color: #646464;
-    font-size: 12px;
-    line-height: 30px; 
-    margin-bottom: 7.5%;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 0;
   }
 
-  .more-description{
+  .about__more-description {
     height: 41.09482955932617px;
     width: 123px;
     left: 370px;
     top: 1960px;
     border-radius: 100px;
-    background: #F9A82F;
+    background: #f9a82f;
     color: white;
     border: none;
     cursor: pointer;
   }
+{%- endstyle -%}
 
-{%- endstyle -%} 
-
-<div class="about-container">
-  <div class="left-part-about">
-    <div class="title">Коротко о нас</div>
-    <div class="description">Мы, Фабрика Декора "КерамикЪ", уже много лет специализируемся на ретро электрике.
-    За годы существования из увлекшихся любителей с горящими глазами наша команда превратилась в настоящих с большой буквы Профессионалов своего дела. Но искра
-    в наших глазах совершенно не затухла! Сегодня, мы планомерно работаем над тем,
-    чтоб вырастить в таких же Профессионалов новых членов нашей команды.</div>
-    <button class="more-description">Подробнее</button>
+<section class="about">
+  <div class="about__content">
+    <h2 class="about__title">Коротко о нас</h2>
+    <p class="about__description">
+      Мы, Фабрика Декора "КерамикЪ", уже много лет специализируемся на ретро электрике. За годы существования из
+      увлекшихся любителей с горящими глазами наша команда превратилась в настоящих с большой буквы Профессионалов
+      своего дела. Но искра в наших глазах совершенно не затухла! Сегодня, мы планомерно работаем над тем, чтоб
+      вырастить в таких же Профессионалов новых членов нашей команды.
+    </p>
+    <button class="about__more-description">Подробнее</button>
   </div>
-  <div class="right-part-about">
-    <img src="https://cdn.shopify.com/s/files/1/0732/3569/3849/files/image.png?v=1678951926" width="auto" height="auto" loading="lazy" alt="ceramic">
+  <div class="about__img">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0732/3569/3849/files/image.png?v=1678951926"
+      width="auto"
+      height="auto"
+      loading="lazy"
+      alt="ceramic"
+    >
   </div>
-</div>
-
-
+</section>
